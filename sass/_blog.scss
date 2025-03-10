@@ -1,0 +1,149 @@
+@use './colors' as *;
+@use './components' as *;
+
+.blog {
+	
+	&__card {
+		display: grid;
+		justify-self: center;
+		align-self: center;
+		width: 100%;
+		max-width: 750px;
+		font-size: 1.4rem;
+		color: $dark;
+
+		&-img {
+			width: 100%;
+			max-height: 360px;
+			object-fit: cover;
+		}
+
+		&-title {
+			margin: 0.9em 0;
+			padding: 1em 0;
+			font-size: 1.8rem;
+		}
+
+		&-text {
+			padding: 0.2em 0;
+			margin-bottom: 1.5em;
+
+			text-align: justify;
+
+			&--lead {
+				margin-bottom: 1.7em;
+				// padding-bottom: 1.5em;
+				font-weight: bold;
+			}
+
+			&-title{
+				padding-bottom: .5em;
+				font-size: 1.6rem;
+			}
+		}
+
+		&-links {
+			display: grid;
+			justify-self: start;
+			align-self: center;
+			margin-top: 2em;
+		}
+
+		&-link {
+			position: relative;
+			padding: 0.5em 0;
+			color: $main-color;
+			transition: color 0.4s;
+
+			i {
+				margin-right: 0.2em;
+			}
+
+			&:hover {
+				color: $hover-btn;
+			}
+		}
+
+		&-link:nth-child(1) {
+			margin-bottom: 0.2em;
+		}
+
+		&-link:nth-child(3) {
+			i {
+				margin-left: 0.2em;
+			}
+		}
+	}
+}
+
+// -------------------------------------
+// MEDIA QURIES
+// -------------------------------------
+
+@media (min-width: 576px) {
+	.blog {
+		&__card {
+			&-title {
+				font-size: 2rem;
+			}
+
+			&-text {
+				&--lead {
+					padding-bottom: 1.7em;
+				}
+
+				&-title{
+					padding-bottom: .7em;
+					font-size: 1.7rem;
+				}
+			}
+
+			&-links {
+				grid-template-columns: repeat(2, 1fr);
+				grid-template-rows: repeat(2, 1fr);
+				width: 100%;
+			}
+
+			&-link:nth-child(1) {
+				justify-self: start;
+				grid-column: 1/2;
+				grid-row: 1/2;
+			}
+
+			&-link:nth-child(2) {
+				justify-self: start;
+				grid-column: 1/2;
+				grid-row: 2/3;
+			}
+
+			&-link:nth-child(3) {
+				justify-self: end;
+				grid-column: 2/3;
+				grid-row: 2/3;
+			}
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.blog {
+		&__card {
+			&-title {
+				font-size: 2.6rem;
+			}
+
+			&-text {
+				margin-bottom: 1.8em;
+				font-size: 1.7rem;
+
+				&-title{
+					font-size: 2rem;
+				}
+			}
+
+			&-link {
+				font-size: 1.7rem;
+			}
+		}
+	}
+}

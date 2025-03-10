@@ -1,0 +1,52 @@
+@use './colors' as *;
+@use './components';
+
+
+.nofound {
+    padding-top: 10em;
+	min-height: 70vh;
+    
+    .wrapper{
+        
+        position: relative;
+    }
+
+	.section-header {
+		margin-bottom: 3em;
+		font-size: 2rem;
+        text-align: center;
+
+	}
+
+	&__btn {
+        position: absolute;
+        left: 50%;
+        bottom: -5em;
+        width: 70%;
+		font-size: 1.6rem;
+		font-weight: 600;
+		border-radius: 12px;
+	}
+}
+
+// -------------------------------------
+// MEDIA QURIES
+// -------------------------------------
+
+@media (min-width: 440px) {
+    .nofound {
+        &__btn {
+            width: auto;
+        }
+    }
+}
+
+
+@media (min-width: 576px) {
+
+    .nofound {
+        padding-top: 14em;
+
+    }
+
+}

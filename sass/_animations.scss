@@ -1,0 +1,66 @@
+@use './colors' as *;
+@use './components' as *;
+
+
+@keyframes navLinksAnimation {
+	from {
+		transform: translateX(-200%);
+	}
+	to {
+		transform: translateX(0);
+	}
+}
+
+
+@keyframes hoverBtnAnimation {
+	from {
+		transform: translateX(0) rotate(20deg);
+	}
+	to {
+		transform: translateX(700%) rotate(20deg);
+	}
+}
+
+
+@keyframes offersArrowAnimation {
+	from {
+		transform: translateX(0);
+	}
+
+	to {
+		transform: translateX(90%);
+	}
+}
+
+//tips popup
+@keyframes show-popup {
+    0%{
+        opacity: 0;
+	}
+    
+	100%{
+        opacity: 1;
+	}
+}
+
+//aboutus team animation
+@keyframes teamSlice {
+	0%{
+        width: 350px;
+	}
+    
+	100%{
+        width: 650px;
+	}
+}
+
+@keyframes teamSliceReverse {
+	0%{
+		width: 650px;
+	}
+    
+	100%{
+
+		width: 350px;
+	}
+}
