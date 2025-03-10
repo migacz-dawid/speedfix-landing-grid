@@ -10,7 +10,7 @@ Rozbudowana strona internetowa stworzona pod **mobile-first** z wykorzystaniem *
 - HTML5  
 - CSS3 (Grid)  
 - JavaScript (Swiper.js)  
-- SEO
+- SEO, Mobile-First
 
 ## 📂 Uruchomienie projektu
 1. **Sklonuj repozytorium**  
